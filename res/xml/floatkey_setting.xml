@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="浮动按键设置" >
+        <com.leoly.fuckey.views.SeekBarPreference
+            android:defaultValue="8"
+            android:dialogMessage="点击误差设置"
+            android:key="click_range"
+            android:max="50"
+            android:summary="点击浮动按钮时，由于可能产生移动，所以设置在多少移动范围内属于点击操作（dp）"
+            android:title="点击误差" />
+        <com.leoly.fuckey.views.SeekBarPreference
+            android:defaultValue="55"
+            android:dialogMessage="移动误差设置"
+            android:key="move_range"
+            android:max="250"
+            android:summary="小范围浮动按钮时，设置在多少移动范围内触发显示所有虚拟按键的操作（dp）"
+            android:title="移动误差" />
+        <com.leoly.fuckey.views.SeekBarPreference
+            android:defaultValue="48"
+            android:dialogMessage="设置浮动按钮的大小"
+            android:key="float_key_size"
+            android:max="100"
+            android:summary="设置浮动按钮的大小（dp）"
+            android:title="浮动按钮大小设置" />
+        <com.leoly.fuckey.views.SeekBarPreference
+            android:defaultValue="127"
+            android:dialogMessage="悬浮按钮无操作时的透明度"
+            android:key="no_action_alpha"
+            android:max="255"
+            android:summary="设置悬浮按钮无操作时的透明度"
+            android:title="无操作透明度设置" />
+        <com.leoly.fuckey.views.SeekBarPreference
+            android:defaultValue="5"
+            android:dialogMessage="悬浮按钮无操作的时间"
+            android:key="no_action_time"
+            android:max="60"
+            android:summary="设置悬浮按钮无操作的时间（秒）"
+            android:title="无操作时间设置" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

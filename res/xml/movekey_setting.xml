@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="浮动按键设置" >
+        <ListPreference
+            android:defaultValue="1"
+            android:dialogTitle="触发区域位置"
+            android:entries="@array/fire_location"
+            android:entryValues="@array/fire_location_value"
+            android:key="fire_location"
+            android:summary="选择触发区域位置（左，右，下）"
+            android:title="触发区域位置" >
+        </ListPreference>
+
+        <com.leoly.fuckey.views.SeekBarPreference
+            android:defaultValue="5"
+            android:dialogMessage="触发区域高度（dp）"
+            android:key="fire_height_range"
+            android:max="500"
+            android:summary="设置触发区域高度（dp）,设置为0时，高度将自适应屏幕。"
+            android:title="触发区域高度（dp）" />
+        <com.leoly.fuckey.views.SeekBarPreference
+            android:defaultValue="125"
+            android:dialogMessage="触发区域宽度（dp）"
+            android:key="fire_wight_range"
+            android:max="500"
+            android:summary="设置触发区域宽度（dp）,设置为0时，宽度将自适应屏幕。"
+            android:title="触发区域宽度（dp）" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

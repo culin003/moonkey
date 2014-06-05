@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Moonkey</string>
+    <string name="action_start_service">启动按键服务</string>
+    <string name="action_importent">重要说明</string>
+
+    <string-array name="fire_types">
+        <item>浮动按键</item>
+        <item>滑动触发</item>
+    </string-array>
+    <string-array name="fire_types_value">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="fire_location">
+        <item>下边</item>
+        <item>左边</item>
+        <item>右边</item>
+    </string-array>
+    <string-array name="fire_location_value">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="custom_key"></string-array>
+    <string-array name="custom_key_value"></string-array>
+    <string-array name="float_key_anima">
+        <item>缩放</item>
+        <item>滑入</item>
+        <item>ALPHA</item>
+    </string-array>
+    <string-array name="float_key_anima_value">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+</resources>

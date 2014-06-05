@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="！！重要！！" >
+        <SwitchPreference
+            android:key="no_use_help"
+            android:summary="如果您会给钱给那些只会在街头跪拜的乞丐，那么，我觉得您更应该支持那些付出努力，并且可能给您带来方便的人……"
+            android:title="我要捐助" />
+        <SwitchPreference
+            android:key="no_use_notice"
+            android:summary="请注意查看软件使用说明！！！"
+            android:title="软件使用说明" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="按键设置" >
+        <ListPreference
+            android:defaultValue="1"
+            android:dialogTitle="选择触发方式"
+            android:entries="@array/fire_types"
+            android:entryValues="@array/fire_types_value"
+            android:key="key_fire_type"
+            android:summary="选择按键的触发方式！！"
+            android:title="触发方式" >
+        </ListPreference>
+
+        <SwitchPreference
+            android:key="floatkey_setting"
+            android:summary="点击进行浮动按键设置"
+            android:title="浮动按键设置" />
+        <SwitchPreference
+            android:key="movekey_setting"
+            android:summary="点击进行滑动按键设置"
+            android:title="滑动按键设置" />
+
+        <MultiSelectListPreference
+            android:dialogTitle="选择自定义按钮"
+            android:entries="@array/custom_key"
+            android:entryValues="@array/custom_key_value"
+            android:key="custom_key"
+            android:summary="点击选择自定义按钮"
+            android:title="自定义按钮" >
+        </MultiSelectListPreference>
+
+        <SwitchPreference
+            android:key="movekey_resorted"
+            android:summary="点击设置自定义按键顺序"
+            android:title="设置按键顺序" />
+
+        <ListPreference
+            android:defaultValue="1"
+            android:dialogTitle="选择动画效果"
+            android:entries="@array/float_key_anima"
+            android:entryValues="@array/float_key_anima_value"
+            android:key="float_key_anima"
+            android:summary="选择浮动按键动画效果！！"
+            android:title="动画效果" >
+        </ListPreference>
+
+        <com.leoly.fuckey.views.SeekBarPreference
+            android:defaultValue="50"
+            android:dialogMessage="震动反馈时间"
+            android:key="vibrate_time"
+            android:max="200"
+            android:summary="设置震动反馈时间（毫秒）"
+            android:title="震动反馈时间设置" />
+        <com.leoly.fuckey.views.SeekBarPreference
+            android:defaultValue="127"
+            android:dialogMessage="按键区域透明度"
+            android:key="key_area_alpha"
+            android:max="255"
+            android:summary="设置按键区域透明度"
+            android:title="按键区域透明度" />
+        <com.leoly.fuckey.views.SeekBarPreference
+            android:defaultValue="5"
+            android:dialogMessage="设置每行显示的按键数"
+            android:key="row_key_count"
+            android:max="10"
+            android:summary="设置每行显示的按键数"
+            android:title="每行显示按键数" />
+        <com.leoly.fuckey.views.SeekBarPreference
+            android:defaultValue="48"
+            android:dialogMessage="设置按钮大小"
+            android:key="key_size"
+            android:max="100"
+            android:summary="设置按键区域中的按钮大小"
+            android:title="设置按钮大小" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="功能开关" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="auto_start_key_service"
+            android:summary="开机自动启动按键服务"
+            android:title="开机自启按键服务" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="open_fullscreen"
+            android:summary="自动修改build.prop文件，达到去掉原生虚拟按键的目的，该功能设置完成后需要重启手机！！"
+            android:title="开启全屏功能（暂未实现）" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="start_key_vibrate"
+            android:summary="当按下虚拟按钮时，会产生震动反馈"
+            android:title="启用按键震动" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="start_key_service"
+            android:summary="启动（重启）按键服务"
+            android:title="启动按键服务" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
