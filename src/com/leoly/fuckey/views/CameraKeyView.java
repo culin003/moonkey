@@ -6,6 +6,7 @@ import java.util.Calendar;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -15,8 +16,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Toast;
 
-import com.leoly.fuckey.R;
 import com.leoly.fuckey.adaptors.KeyViewAdaptor;
+import com.leoly.fuckey.constants.Cs;
 import com.leoly.fuckey.utils.AnimationUtils;
 import com.leoly.fuckey.utils.Lg;
 import com.leoly.fuckey.utils.SharePool;
@@ -36,7 +37,7 @@ public class CameraKeyView extends KeyViewAdaptor {
 		super(context);
 		setOnLongClickListener(null);
 		setOnClickListener(null);
-		setImageResource(R.drawable.camera);
+		setImageBitmap(SharePool.get(Cs.CAMERA_KEY, Bitmap.class));
 		setName("相机键");
 	}
 
@@ -44,7 +45,7 @@ public class CameraKeyView extends KeyViewAdaptor {
 		super(context, atrs);
 		setOnLongClickListener(null);
 		setOnClickListener(null);
-		setImageResource(R.drawable.camera);
+		setImageBitmap(SharePool.get(Cs.CAMERA_KEY, Bitmap.class));
 		setName("相机键");
 	}
 
@@ -52,7 +53,7 @@ public class CameraKeyView extends KeyViewAdaptor {
 		super(context, atrs, defStyle);
 		setOnLongClickListener(null);
 		setOnClickListener(null);
-		setImageResource(R.drawable.camera);
+		setImageBitmap(SharePool.get(Cs.CAMERA_KEY, Bitmap.class));
 		setName("相机键");
 	}
 

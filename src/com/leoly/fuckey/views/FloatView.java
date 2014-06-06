@@ -1,6 +1,7 @@
 package com.leoly.fuckey.views;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,6 +13,7 @@ import android.widget.ImageView;
 import com.leoly.fuckey.constants.Cs;
 import com.leoly.fuckey.listeners.OnMoveListener;
 import com.leoly.fuckey.utils.DensityUtil;
+import com.leoly.fuckey.utils.SharePool;
 
 /**
  * @author <a href="mailto:kris@krislq.com">Kris.lee</a>
@@ -59,6 +61,7 @@ public class FloatView extends ImageView {
 
 	public FloatView(Context context) {
 		super(context);
+		setImageBitmap(SharePool.get(Cs.FLOAT_KEY, Bitmap.class));
 	}
 
 	private int getStatubarHeight() {

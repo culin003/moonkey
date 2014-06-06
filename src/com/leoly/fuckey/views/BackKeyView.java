@@ -7,23 +7,25 @@ import java.util.TimerTask;
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningTaskInfo;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.View;
 
 import com.leoly.fuckey.R;
 import com.leoly.fuckey.adaptors.KeyViewAdaptor;
+import com.leoly.fuckey.constants.Cs;
 import com.leoly.fuckey.utils.AnimationUtils;
 import com.leoly.fuckey.utils.Lg;
 import com.leoly.fuckey.utils.SharePool;
 
 public class BackKeyView extends KeyViewAdaptor {
-	
+
 	public BackKeyView(Context context) {
 		super(context);
 		setOnLongClickListener(null);
 		setOnClickListener(null);
-		setImageResource(R.drawable.back);
+		setImageBitmap(SharePool.get(Cs.BACK_KEY, Bitmap.class));
 		setName("返回键");
 	}
 
@@ -31,7 +33,7 @@ public class BackKeyView extends KeyViewAdaptor {
 		super(context, atrs);
 		setOnLongClickListener(null);
 		setOnClickListener(null);
-		setImageResource(R.drawable.back);
+		setImageBitmap(SharePool.get(Cs.BACK_KEY, Bitmap.class));
 		setName("返回键");
 	}
 
@@ -39,7 +41,7 @@ public class BackKeyView extends KeyViewAdaptor {
 		super(context, atrs, defStyle);
 		setOnLongClickListener(null);
 		setOnClickListener(null);
-		setImageResource(R.drawable.back);
+		setImageBitmap(SharePool.get(Cs.BACK_KEY, Bitmap.class));
 		setName("返回键");
 	}
 

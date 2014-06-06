@@ -1,12 +1,14 @@
 package com.leoly.fuckey.views;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.View;
 
 import com.leoly.fuckey.R;
 import com.leoly.fuckey.adaptors.KeyViewAdaptor;
+import com.leoly.fuckey.constants.Cs;
 import com.leoly.fuckey.utils.AnimationUtils;
 import com.leoly.fuckey.utils.SharePool;
 
@@ -15,7 +17,7 @@ public class CallKeyView extends KeyViewAdaptor {
 		super(context);
 		setOnLongClickListener(null);
 		setOnClickListener(null);
-		setImageResource(R.drawable.call);
+		setImageBitmap(SharePool.get(Cs.CALL_KEY, Bitmap.class));
 		setName("拨号键");
 	}
 
@@ -23,7 +25,7 @@ public class CallKeyView extends KeyViewAdaptor {
 		super(context, atrs);
 		setOnLongClickListener(null);
 		setOnClickListener(null);
-		setImageResource(R.drawable.call);
+		setImageBitmap(SharePool.get(Cs.CALL_KEY, Bitmap.class));
 		setName("拨号键");
 	}
 
@@ -31,7 +33,7 @@ public class CallKeyView extends KeyViewAdaptor {
 		super(context, atrs, defStyle);
 		setOnLongClickListener(null);
 		setOnClickListener(null);
-		setImageResource(R.drawable.call);
+		setImageBitmap(SharePool.get(Cs.CALL_KEY, Bitmap.class));
 		setName("拨号键");
 	}
 

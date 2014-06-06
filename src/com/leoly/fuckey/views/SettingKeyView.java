@@ -2,12 +2,15 @@ package com.leoly.fuckey.views;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.util.AttributeSet;
 import android.view.View;
 
 import com.leoly.fuckey.R;
 import com.leoly.fuckey.adaptors.KeyViewAdaptor;
+import com.leoly.fuckey.constants.Cs;
 import com.leoly.fuckey.utils.AnimationUtils;
+import com.leoly.fuckey.utils.SharePool;
 
 public class SettingKeyView extends KeyViewAdaptor {
 
@@ -15,7 +18,7 @@ public class SettingKeyView extends KeyViewAdaptor {
 		super(context);
 		setOnLongClickListener(null);
 		setOnClickListener(null);
-		setImageResource(R.drawable.ic_actions);
+		setImageBitmap(SharePool.get(Cs.SETTING_KEY, Bitmap.class));
 		setName("设置键");
 	}
 
@@ -23,7 +26,7 @@ public class SettingKeyView extends KeyViewAdaptor {
 		super(context, atrs);
 		setOnLongClickListener(null);
 		setOnClickListener(null);
-		setImageResource(R.drawable.ic_actions);
+		setImageBitmap(SharePool.get(Cs.SETTING_KEY, Bitmap.class));
 		setName("设置键");
 	}
 
@@ -31,7 +34,7 @@ public class SettingKeyView extends KeyViewAdaptor {
 		super(context, atrs, defStyle);
 		setOnLongClickListener(null);
 		setOnClickListener(null);
-		setImageResource(R.drawable.ic_actions);
+		setImageBitmap(SharePool.get(Cs.SETTING_KEY, Bitmap.class));
 		setName("设置键");
 	}
 
